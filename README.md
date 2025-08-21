@@ -78,7 +78,6 @@ dpkg -i zabbix-release_6.4-1+debian11_all.deb
 apt update
 apt install zabbix-agent
 sed -i 's/Server=127.0.0.1/Server=89.169.176.175/g' /etc/zabbix/zabbix_agentd.conf
-# На машине с Zabbix Server добавил 'Server=127.0.0.1,89.169.176.175' в файл /etc/zabbix/zabbix_agentd.conf
 systemctl restart zabbix-agent
 systemctl enable zabbix-agent
 ```
